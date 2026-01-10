@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/pagination";
 
 @theme {
   --color-primary-DarkBlue: #043873;
@@ -9,4 +11,12 @@
   --color-secondary-black: #212529;
 
   --font-inter: "Inter", sans-serif;
+}
+
+.swiper-pagination-bullet {
+  @apply w-3 h-3 rounded-full bg-primary-LightBlue opacity-100;
+  margin: 0 6px !important;
+}
+.swiper-pagination-bullet-active {
+  @apply w-3 h-3 bg-primary-DarkBlue;
 }

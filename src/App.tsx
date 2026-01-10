@@ -38,6 +38,18 @@ function App() {
 			description: "Whether you want to get organized, keep your personal life on track, or boost workplace productivity, Evernote has the right plan for you.",
 			horizontalScrollItems: [
 				{
+					title: "Free",
+					price: "$0",
+					description: "Free version",
+					bulletPoints: [
+						"2 GB monthly uploads",
+						"100 MB max. note size",
+						"Connect primary Google Calendar account",
+						"Add due dates, reminders, and notifications to your tasks"
+					],
+					buttonText: "Get Started"
+				},
+				{
 					title: "Personal",
 					price: "$11.2",
 					description: "Keep home and family on track",
@@ -45,6 +57,20 @@ function App() {
 						"Sync unlimited devices",
 						"10 GB monthly uploads",
 						"200 MB max. note size",
+						"Customize Home dashboard and access extra widgets",
+						"Connect primary Google Calendar account",
+						"Add due dates, reminders, and notifications to your tasks"
+					],
+					buttonText: "Get Started"
+				},
+				{
+					title: "Business",
+					price: "$32.9",
+					description: "Keep your business on track",
+					bulletPoints: [
+						"Sync unlimited devices",
+						"20 GB monthly uploads",
+						"300 MB max. note size",
 						"Customize Home dashboard and access extra widgets",
 						"Connect primary Google Calendar account",
 						"Add due dates, reminders, and notifications to your tasks"
