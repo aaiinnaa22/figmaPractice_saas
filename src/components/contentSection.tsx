@@ -16,7 +16,7 @@ const textClassMap = {
 	light: "text-secondary-black"
 }
 
-export function ContentSection({title, description, buttonText, imgSrc, imgPosition = "bottom", backgroundVariant = "light", horizontalScrollItems}: ContentSectionProps)
+export function ContentSection({title, description,description2, buttonText, imgSrc, imgPosition = "bottom", backgroundVariant = "light", horizontalScrollItems}: ContentSectionProps)
 {
 	const image = imgSrc
 	? <img src={imgSrc}></img>
@@ -44,6 +44,8 @@ export function ContentSection({title, description, buttonText, imgSrc, imgPosit
 						<p className='text-secondary-white font-extralight text-lg font-inter'>{buttonText}</p>
 						<ChevronRight className='text-secondary-white'/>
 					</button>}
+				{description &&
+						<p className={"font-inter text-secondary-black text-lg text-center font-light " + textClass}>{description2}</p>}
 				{imgPosition === "bottom" && image}
 			</div>
 		</section>

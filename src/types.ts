@@ -23,6 +23,7 @@ type HorizontalScrollItems =
 export type ContentSectionData = {
   title: string;
   description?: string;
+  description2?: string;
   buttonText?: string;
   imgSrc?: string;
   imgPosition?: ImagePosition;

@@ -8,6 +8,8 @@ import dataImg from "./assets/data.png";
 import appImg from "./assets/Apps.png";
 import iconImg from "./assets/logo.png";
 import testClientProfile from "./assets/testClientProfile.png";
+import appIconsImg from "./assets/appIcons.png";
+import { Footer } from './components/footer';
 
 function App() {
 	const ContentSections: ContentSectionData[] = [
@@ -18,7 +20,7 @@ function App() {
 		},
 		{
 			title: "Work together",
-			description: "With whitespace, share your notes with your colleagues and collaborate on them. You can also publish a note to the internet and share the URL with others.",
+			description: "With whitepace, share your notes with your colleagues and collaborate on them. You can also publish a note to the internet and share the URL with others.",
 			buttonText: "Try it now",
 			imgSrc: workTogetherImg
 		},
@@ -87,7 +89,7 @@ function App() {
 		},
 		{
 			title: "Your work, everywhere you are",
-			description: "Access your notes from your computer, phone or tablet by synchronising with various services, including whitespace, Dropbox and OneDrive. The app is available on Windows, macOS, Linux, Android and iOS. A terminal app is also available!",
+			description: "Access your notes from your computer, phone or tablet by synchronising with various services, including whitepace, Dropbox and OneDrive. The app is available on Windows, macOS, Linux, Android and iOS. A terminal app is also available!",
 			buttonText: "Try Taskey",
 			backgroundVariant: "dark",
 			imgPosition: "none"
@@ -100,8 +102,8 @@ function App() {
 			imgPosition: "top"
 		},
 		{
-			title: "Work with Your Favorite Apps Using whitespace",
-			description: "Whitespace teams up with your favorite software. Integrate with over 1000+ apps with Zapier to have all the tools you need for your project success.",
+			title: "Work with Your Favorite Apps Using whitepace",
+			description: "whitepace teams up with your favorite software. Integrate with over 1000+ apps with Zapier to have all the tools you need for your project success.",
 			buttonText: "Read more",
 			imgSrc: appImg,
 			imgPosition: "top",
@@ -136,15 +138,20 @@ function App() {
 				]
 			},
 			imgPosition: "none"
+		},
+		{
+			title: "Try Whitepace today",
+			description: "Get started for free. Add your whole team as your needs grow.",
+			buttonText: "Try Taskey free",
+			description2: "On a big team? Contact sales",
+			imgSrc: appIconsImg,
+			backgroundVariant: "dark"
 		}
 	];
 	return (
 		<div className="w-screen h-screen grid grid-cols-1 bg-secondary-white">
 			<header className="sticky h-fit w-full top-0 left-0 p-3 bg-primary-DarkBlue flex items-center justify-between">
-				<div className='flex items-center gap-2'>
-					<img className="object-contain h-5.5" src={iconImg}></img>
-					<h1 className='font-inter font-bold text-secondary-white text-xl'>whitespace</h1>
-				</div>
+				<img src={iconImg}></img>
 				<Menu className='h-10 w-10 text-secondary-white'/>
 			</header>
 			<HeroSection/>
@@ -153,6 +160,7 @@ function App() {
 					key={section.title}
 					title={section.title}
 					description={section.description}
+					description2={section.description2}
 					buttonText={section.buttonText}
 					imgSrc={section.imgSrc}
 					imgPosition={section.imgPosition}
@@ -160,6 +168,7 @@ function App() {
 					horizontalScrollItems={section.horizontalScrollItems}
 				/>
 			))}
+			<Footer/>
 		</div>
 	);
 }
