@@ -8,12 +8,24 @@ export type PricePlanItem = {
 	buttonText: string;
 }
 
+export type ClientQuoteItem = {
+	quote: string;
+	profile: string;
+	name: string;
+	role: string;
+	location: string;
+}
+
+type HorizontalScrollItems =
+  | { type: 'pricePlan'; items: PricePlanItem[] }
+  | { type: 'clientQuotes'; items: ClientQuoteItem[] };
+
 export type ContentSectionData = {
   title: string;
-  description: string;
+  description?: string;
   buttonText?: string;
   imgSrc?: string;
   imgPosition?: ImagePosition;
-  horizontalScrollItems?: PricePlanItem[];
+  horizontalScrollItems?: HorizontalScrollItems;
   backgroundVariant?: BackgroundVariant;
 };

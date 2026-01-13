@@ -2,6 +2,7 @@ import {ChevronRight} from "lucide-react"
 import type { ContentSectionData } from "../types";
 import { Title } from "./title";
 import { PricePlan } from "./pricePlan";
+import { ClientQuotes } from "./ClientQuotes";
 
 type ContentSectionProps = ContentSectionData
 
@@ -31,10 +32,13 @@ export function ContentSection({title, description, buttonText, imgSrc, imgPosit
 				{imgPosition === "top" && image}
 				<div className='flex flex-col gap-8'>
 					<Title textClass={textClass} text={title}/>
-					<p className={"font-inter text-secondary-black text-lg text-center font-light " + textClass}>{description}</p>
+					{description &&
+						<p className={"font-inter text-secondary-black text-lg text-center font-light " + textClass}>{description}</p>}
 				</div>
-				{horizontalScrollItems &&
-					<PricePlan pricePlanItems={horizontalScrollItems}/>}
+				{horizontalScrollItems?.type === "pricePlan" &&
+					<PricePlan pricePlanItems={horizontalScrollItems.items}/>}
+				{horizontalScrollItems?.type === "clientQuotes" &&
+					<ClientQuotes clientQuoteItems={horizontalScrollItems.items}/>}
 				{buttonText &&
 					<button className='bg-primary-LightBlue rounded-lg py-5 px-9 flex gap-2 items-center'>
 						<p className='text-secondary-white font-extralight text-lg font-inter'>{buttonText}</p>

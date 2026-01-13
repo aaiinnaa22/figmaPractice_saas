@@ -7,6 +7,7 @@ import workTogetherImg from "./assets/workTogether.png";
 import dataImg from "./assets/data.png";
 import appImg from "./assets/Apps.png";
 import iconImg from "./assets/logo.png";
+import testClientProfile from "./assets/testClientProfile.png";
 
 function App() {
 	const ContentSections: ContentSectionData[] = [
@@ -36,55 +37,60 @@ function App() {
 		{
 			title: "Choose Your Plan",
 			description: "Whether you want to get organized, keep your personal life on track, or boost workplace productivity, Evernote has the right plan for you.",
-			horizontalScrollItems: [
-				{
-					title: "Free",
-					price: "$0",
-					description: "Free version",
-					bulletPoints: [
-						"2 GB monthly uploads",
-						"100 MB max. note size",
-						"Connect primary Google Calendar account",
-						"Add due dates, reminders, and notifications to your tasks"
-					],
-					buttonText: "Get Started"
-				},
-				{
-					title: "Personal",
-					price: "$11.2",
-					description: "Keep home and family on track",
-					bulletPoints: [
-						"Sync unlimited devices",
-						"10 GB monthly uploads",
-						"200 MB max. note size",
-						"Customize Home dashboard and access extra widgets",
-						"Connect primary Google Calendar account",
-						"Add due dates, reminders, and notifications to your tasks"
-					],
-					buttonText: "Get Started"
-				},
-				{
-					title: "Business",
-					price: "$32.9",
-					description: "Keep your business on track",
-					bulletPoints: [
-						"Sync unlimited devices",
-						"20 GB monthly uploads",
-						"300 MB max. note size",
-						"Customize Home dashboard and access extra widgets",
-						"Connect primary Google Calendar account",
-						"Add due dates, reminders, and notifications to your tasks"
-					],
-					buttonText: "Get Started"
-				},
-			],
+			horizontalScrollItems: {
+				type: "pricePlan",
+				items:
+				[
+					{
+						title: "Free",
+						price: "$0",
+						description: "Free version",
+						bulletPoints: [
+							"2 GB monthly uploads",
+							"100 MB max. note size",
+							"Connect primary Google Calendar account",
+							"Add due dates, reminders, and notifications to your tasks"
+						],
+						buttonText: "Get Started"
+					},
+					{
+						title: "Personal",
+						price: "$11.2",
+						description: "Keep home and family on track",
+						bulletPoints: [
+							"Sync unlimited devices",
+							"10 GB monthly uploads",
+							"200 MB max. note size",
+							"Customize Home dashboard and access extra widgets",
+							"Connect primary Google Calendar account",
+							"Add due dates, reminders, and notifications to your tasks"
+						],
+						buttonText: "Get Started"
+					},
+					{
+						title: "Business",
+						price: "$32.9",
+						description: "Keep your business on track",
+						bulletPoints: [
+							"Sync unlimited devices",
+							"20 GB monthly uploads",
+							"300 MB max. note size",
+							"Customize Home dashboard and access extra widgets",
+							"Connect primary Google Calendar account",
+							"Add due dates, reminders, and notifications to your tasks"
+						],
+						buttonText: "Get Started"
+					},
+				]
+			},
 			imgPosition: "none"
 		},
 		{
 			title: "Your work, everywhere you are",
 			description: "Access your notes from your computer, phone or tablet by synchronising with various services, including whitespace, Dropbox and OneDrive. The app is available on Windows, macOS, Linux, Android and iOS. A terminal app is also available!",
 			buttonText: "Try Taskey",
-			backgroundVariant: "dark"
+			backgroundVariant: "dark",
+			imgPosition: "none"
 		},
 		{
 			title: "100% your data",
@@ -101,6 +107,36 @@ function App() {
 			imgPosition: "top",
 			backgroundVariant: "dark"
 		},
+		{
+			title: "What Our Clients Says",
+			horizontalScrollItems: {
+				type: "clientQuotes",
+				items: [
+					{
+						quote: "Taskkey is designed as a collaboration tool for businesses that is a full project management solution.",
+						name: "Oberon Shaw, MCH",
+						profile: testClientProfile,
+						role: "Head of Talent Acquisition",
+						location: "North America"
+					},
+					{
+						quote: "Taskkey is designed as a collaboration tool for businesses that is a full project management solution.",
+						profile: testClientProfile,
+						name: "Oberon Shaw, MCH",
+						role: "Head of Talent Acquisition",
+						location: "North America"
+					},
+					{
+						quote: "Taskkey is designed as a collaboration tool for businesses that is a full project management solution.",
+						profile: testClientProfile,
+						name: "Oberon Shaw, MCH",
+						role: "Head of Talent Acquisition",
+						location: "North America"
+					},
+				]
+			},
+			imgPosition: "none"
+		}
 	];
 	return (
 		<div className="w-screen h-screen grid grid-cols-1 bg-secondary-white">
