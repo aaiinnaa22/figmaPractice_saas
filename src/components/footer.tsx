@@ -1,6 +1,7 @@
 import logoImg from "../assets/logo.png"
 import {Links} from "./links"
 import { ChevronRight } from "lucide-react";
+import { LanguageSelector } from "./languageSelector";
 
 const LinkSections = [
 	["Product", "Overview", "Pricing", "Customer stories"],
@@ -12,7 +13,7 @@ export type LinkSection = typeof LinkSections[number];
 
 export function Footer() {
 	return (
-		<footer className='px-8 py-20 bg-primary-DarkBlue h-fit flex flex-col gap-16'>
+		<footer className='px-8 pt-20 bg-primary-DarkBlue h-fit flex flex-col gap-16'>
 			<div className="flex flex-col gap-6">
 				<img className="object-contain h-9" src={logoImg}></img>
 				<p
@@ -34,7 +35,13 @@ export function Footer() {
 					<ChevronRight className='text-secondary-white'/>
 				</button>
 			</div>
-			
+			<div className="flex flex-col gap-4 px-8 items-center border-b border-primary-LightBlue pb-5">
+				<LanguageSelector/>
+				<p className="text-sm font-inter text-secondary-white font-light">Terms & privacy</p>
+				<p className="text-sm font-inter text-secondary-white font-light">Security</p>
+				<p className="text-sm font-inter text-secondary-white font-light">Status</p>
+				<p className="text-sm font-inter text-secondary-white font-light">©2021 Whitepace LLC.</p>
+			</div>
 		</footer>
 	);
 }

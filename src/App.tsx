@@ -1,7 +1,7 @@
 import './index.css'
 import {Menu} from "lucide-react"
-import { HeroSection } from './components/HeroSection';
-import { ContentSection } from './components/ContentSection';
+import { HeroSection } from './components/heroSection';
+import { ContentSection } from './components/contentSection';
 import type { ContentSectionData } from './types';
 import workTogetherImg from "./assets/workTogether.png";
 import dataImg from "./assets/data.png";
@@ -10,6 +10,8 @@ import iconImg from "./assets/logo.png";
 import testClientProfile from "./assets/testClientProfile.png";
 import appIconsImg from "./assets/appIcons.png";
 import { Footer } from './components/footer';
+import socialsImg from "./assets/socials.png"
+import sponsorsImg from "./assets/sponsors.png"
 
 function App() {
 	const ContentSections: ContentSectionData[] = [
@@ -102,6 +104,10 @@ function App() {
 			imgPosition: "top"
 		},
 		{
+			title: "Our sponsors",
+			imgSrc: sponsorsImg
+		},
+		{
 			title: "Work with Your Favorite Apps Using whitepace",
 			description: "whitepace teams up with your favorite software. Integrate with over 1000+ apps with Zapier to have all the tools you need for your project success.",
 			buttonText: "Read more",
@@ -169,6 +175,9 @@ function App() {
 				/>
 			))}
 			<Footer/>
+			<div className='bg-primary-DarkBlue flex justify-center py-4'>
+				<img src={socialsImg} className="py-4"></img>
+			</div>
 		</div>
 	);
 }

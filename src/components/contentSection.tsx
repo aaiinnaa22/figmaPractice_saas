@@ -2,7 +2,7 @@ import {ChevronRight} from "lucide-react"
 import type { ContentSectionData } from "../types";
 import { Title } from "./title";
 import { PricePlan } from "./pricePlan";
-import { ClientQuotes } from "./ClientQuotes";
+import { ClientQuotes } from "./clientQuotes";
 
 type ContentSectionProps = ContentSectionData
 
@@ -27,7 +27,7 @@ export function ContentSection({title, description,description2, buttonText, img
 
 
 	return (
-		<section className={"px-4 py-20 h-fit flex flex-col gap-26 " + backgroundClass}>
+		<section className={"px-4 py-18 h-fit flex flex-col gap-26 " + backgroundClass}>
 			<div className='w-full flex flex-col justify-center items-center gap-16'>
 				{imgPosition === "top" && image}
 				<div className='flex flex-col gap-8'>
