@@ -14,9 +14,27 @@
 }
 
 .swiper-pagination-bullet {
-  @apply w-3 h-3 rounded-full bg-primary-LightBlue opacity-100;
-  margin: 0 6px !important;
+	@apply w-3 h-3 rounded-full bg-primary-LightBlue opacity-100;
+	margin: 0 6px !important;
+	}
+	.swiper-pagination-bullet-active {
+	@apply w-3 h-3 bg-primary-DarkBlue;
 }
-.swiper-pagination-bullet-active {
-  @apply w-3 h-3 bg-primary-DarkBlue;
+
+@layer components {
+	.p1 {
+		@apply text-2xl font-medium tracking-wide
+	}
+	.p2 {
+		@apply font-inter text-[18px] font-light
+	}
+	.p3 {
+		@apply font-inter font-light text-[16px] leading-tight
+	}
+	.h4 {
+		@apply font-inter font-bold text-[37px]
+	}
+	.h5 {
+		@apply font-inter font-bold text-3xl
+	}
 }

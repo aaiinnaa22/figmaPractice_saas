@@ -1,7 +1,7 @@
 import logoImg from "../assets/logo.png"
 import {Links} from "./links"
-import { ChevronRight } from "lucide-react";
 import { LanguageSelector } from "./languageSelector";
+import { LightBlueButton } from "./lightBlueButton";
 
 const LinkSections = [
 	["Product", "Overview", "Pricing", "Customer stories"],
@@ -17,7 +17,7 @@ export function Footer() {
 			<div className="flex flex-col gap-6">
 				<img className="object-contain h-9" src={logoImg}></img>
 				<p
-				className="font-inter text-secondary-white text-lg text-center font-light">
+				className="p2 text-secondary-white text-center">
 					whitepace was created for the new ways we live and work. We make beautyfully designed around the world
 				</p>
 			</div>
@@ -25,22 +25,19 @@ export function Footer() {
 				<Links linkArray={section}/>
 			))}
 			<div className="flex flex-col gap-6 px-8">
-				<h2 className='font-inter font-bold text-secondary-white text-3xl text-center'>Try It Today</h2>
+				<h2 className="h5 text-center text-secondary-white">Try It Today</h2>
 				<p
-				className="font-inter text-secondary-white text-lg text-center font-light">
+				className="p2 text-secondary-white text-center">
 					Get started for free. Add your whole team as your needs grow.
 				</p>
-				<button className='bg-primary-LightBlue rounded-lg py-5 px-9 flex gap-2 items-center'>
-					<p className='text-secondary-white font-extralight text-lg font-inter'>Start today</p>
-					<ChevronRight className='text-secondary-white'/>
-				</button>
+				<LightBlueButton buttonText="Start today"/>
 			</div>
-			<div className="flex flex-col gap-4 px-8 items-center border-b border-primary-LightBlue pb-5">
+			<div className="flex flex-col gap-5 px-8 items-center border-b border-primary-LightBlue pb-5">
 				<LanguageSelector/>
-				<p className="text-sm font-inter text-secondary-white font-light">Terms & privacy</p>
-				<p className="text-sm font-inter text-secondary-white font-light">Security</p>
-				<p className="text-sm font-inter text-secondary-white font-light">Status</p>
-				<p className="text-sm font-inter text-secondary-white font-light">©2021 Whitepace LLC.</p>
+				<p className="p3 text-secondary-white">Terms & privacy</p>
+				<p className="p3 text-secondary-white">Security</p>
+				<p className="p3 text-secondary-white">Status</p>
+				<p className="p3 text-secondary-white">©2021 Whitepace LLC.</p>
 			</div>
 		</footer>
 	);

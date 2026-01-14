@@ -19,17 +19,17 @@ export function ClientQuotes({clientQuoteItems}: ClientQuotesProps) {
 							<img
 							src={quoteMarkImg}
 							className="w-14"></img>
-							<p className="font-inter font-light leading-tight">{quote.quote}</p>
+							<p className="p3">{quote.quote}</p>
 						</div>
 						<div className="flex flex-col gap-6">
 							<img
 							src={quote.profile}
 							className="object-cover aspect-square w-16 rounded-full">
 							</img>
-							<h3 className="font-bold font-inter">{quote.name}</h3>
+							<h3 className="font-bold p2">{quote.name}</h3>
 							<div className="font-inter font-light">
-								<h2>{quote.role},</h2>
-								<h2>{quote.location}</h2>
+								<h2 className="p2">{quote.role},</h2>
+								<h2 className="p2">{quote.location}</h2>
 							</div>
 						</div>
 					</div>

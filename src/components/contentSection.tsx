@@ -1,8 +1,8 @@
-import {ChevronRight} from "lucide-react"
 import type { ContentSectionData } from "../types";
 import { Title } from "./title";
 import { PricePlan } from "./pricePlan";
 import { ClientQuotes } from "./clientQuotes";
+import { LightBlueButton } from "./lightBlueButton";
 
 type ContentSectionProps = ContentSectionData
 
@@ -33,18 +33,14 @@ export function ContentSection({title, description,description2, buttonText, img
 				<div className='flex flex-col gap-8'>
 					<Title textClass={textClass} text={title}/>
 					{description &&
-						<p className={"font-inter text-secondary-black text-lg text-center font-light " + textClass}>{description}</p>}
+						<p className={"p2 text-center " + textClass}>{description}</p>}
 				</div>
 				{horizontalScrollItems?.type === "pricePlan" &&
 					<PricePlan pricePlanItems={horizontalScrollItems.items}/>}
 				{horizontalScrollItems?.type === "clientQuotes" &&
 					<ClientQuotes clientQuoteItems={horizontalScrollItems.items}/>}
-				{buttonText &&
-					<button className='bg-primary-LightBlue rounded-lg py-5 px-9 flex gap-2 items-center'>
-						<p className='text-secondary-white font-extralight text-lg font-inter'>{buttonText}</p>
-						<ChevronRight className='text-secondary-white'/>
-					</button>}
-				{description &&
+				{buttonText &&	<LightBlueButton buttonText={buttonText}/>}
+				{description2 &&
 						<p className={"font-inter text-secondary-black text-lg text-center font-light " + textClass}>{description2}</p>}
 				{imgPosition === "bottom" && image}
 			</div>
