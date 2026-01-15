@@ -28,8 +28,8 @@ export function ClientQuotes({clientQuoteItems}: ClientQuotesProps) {
 							</img>
 							<h3 className="font-bold p2">{quote.name}</h3>
 							<div className="font-inter font-light">
-								<h2 className="p2">{quote.role},</h2>
-								<h2 className="p2">{quote.location}</h2>
+								<p className="p2">{quote.role},</p>
+								<p className="p2">{quote.location}</p>
 							</div>
 						</div>
 					</div>

@@ -1,15 +1,16 @@
+import type { LinkSection } from "../data";
+
 type LinksProps =
 {
-	linkArray: string[];
+	linkArray: LinkSection;
 }
 
 export function Links({linkArray}: LinksProps) {
-	const [title, ...links] = linkArray;
 	return (
-		<div className="flexCol items-center gap-4 font-inter text-secondary-white">
-			<h3 className="p2 font-bold">{title}</h3>
+		<nav className="flexCol items-center gap-4 font-inter text-secondary-white">
+			<h3 className="p2 font-bold">{linkArray.title}</h3>
 			<ul className="flexCol items-center gap-4">
-				{links.map((link) => (
+				{linkArray.links.map((link) => (
 					<li
 					key={link}
 					className="p2">
@@ -17,6 +18,6 @@ export function Links({linkArray}: LinksProps) {
 					</li>
 				))}
 			</ul>
-		</div>
+		</nav>
 	)
 }

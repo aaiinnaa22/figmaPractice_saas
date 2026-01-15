@@ -147,9 +147,30 @@ export const ContentSections: ContentSectionData[] = [
 	}
 ];
 
+export type LinkSection = {
+  title?: string;
+  links: string[];
+};
 
-export const LinkSections = [
-	["Product", "Overview", "Pricing", "Customer stories"],
-	["Resources", "Blog", "Guides & tutorials", "Help center"],
-	["Company", "About us", "Careers", "Media kit"]
-];
+export const FooterSection = {
+	description: "whitepace was created for the new ways we live and work. We make beautyfully designed around the world",
+	links: [
+		{
+			title: "Product",
+			links: ["Overview", "Pricing", "Customer stories"]
+		},
+		{
+			title: "Resources",
+			links: ["Blog", "Guides & tutorials", "Help center"]
+		},
+		{
+			title: "Company",
+			links: ["About us", "Careers", "Media kit"]
+		},
+	] as LinkSection[],
+	legalLinks: {links: ["Terms & privacy", "Security", "Status"]} as LinkSection,
+	title: "Try It Today",
+	description2: "Get started for free. Add your whole team as your needs grow.",
+	buttonText: "Start today",
+	copyright: "©2021 Whitepace LLC."
+}
