@@ -1,12 +1,14 @@
-import type { LinkSection } from "./footer"
+type LinksProps =
+{
+	linkArray: string[];
+}
 
-
-export function Links({linkArray}: {linkArray : LinkSection}) {
+export function Links({linkArray}: LinksProps) {
 	const [title, ...links] = linkArray;
 	return (
-		<div className="flex flex-col items-center gap-4 font-inter text-secondary-white">
+		<div className="flexCol items-center gap-4 font-inter text-secondary-white">
 			<h3 className="p2 font-bold">{title}</h3>
-			<ul className="flex flex-col items-center gap-4">
+			<ul className="flexCol items-center gap-4">
 				{links.map((link) => (
 					<li
 					key={link}

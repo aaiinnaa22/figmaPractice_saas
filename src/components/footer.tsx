@@ -2,19 +2,13 @@ import logoImg from "../assets/logo.png"
 import {Links} from "./links"
 import { LanguageSelector } from "./languageSelector";
 import { LightBlueButton } from "./lightBlueButton";
+import { LinkSections } from "../data";
 
-const LinkSections = [
-	["Product", "Overview", "Pricing", "Customer stories"],
-	["Resources", "Blog", "Guides & tutorials", "Help center"],
-	["Company", "About us", "Careers", "Media kit"]
-];
-
-export type LinkSection = typeof LinkSections[number];
 
 export function Footer() {
 	return (
-		<footer className='px-8 pt-20 bg-primary-DarkBlue h-fit flex flex-col gap-16'>
-			<div className="flex flex-col gap-6">
+		<footer className='px-8 pt-20 bg-primary-DarkBlue h-fit flexCol gap-16'>
+			<div className="flexCol gap-6">
 				<img className="object-contain h-9" src={logoImg}></img>
 				<p
 				className="p2 text-secondary-white text-center">
@@ -24,7 +18,7 @@ export function Footer() {
 			{LinkSections.map((section) => (
 				<Links linkArray={section}/>
 			))}
-			<div className="flex flex-col gap-6 px-8">
+			<div className="flexCol gap-6 px-8">
 				<h2 className="h5 text-center text-secondary-white">Try It Today</h2>
 				<p
 				className="p2 text-secondary-white text-center">
@@ -32,7 +26,7 @@ export function Footer() {
 				</p>
 				<LightBlueButton buttonText="Start today"/>
 			</div>
-			<div className="flex flex-col gap-5 px-8 items-center border-b border-primary-LightBlue pb-5">
+			<div className="flexCol gap-5 px-8 items-center border-b border-primary-LightBlue pb-5">
 				<LanguageSelector/>
 				<p className="p3 text-secondary-white">Terms & privacy</p>
 				<p className="p3 text-secondary-white">Security</p>

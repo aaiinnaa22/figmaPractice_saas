@@ -14,11 +14,11 @@ export function PricePlan({pricePlanItems}: PricePlanProps) {
 		<Carousel className="w-full h-175">
 			{pricePlanItems.map((plan, index) => (
 				<SwiperSlide key={index}>
-					<div className="bg-primary-DarkBlue rounded-lg p-5 font-inter text-secondary-white flex flex-col gap-5">
+					<div className="bg-primary-DarkBlue rounded-lg p-5 font-inter text-secondary-white flexCol gap-5">
 						<h3 className="p1">{plan.title}</h3>
 						<h2 className="h4">{plan.price}</h2>
 						<p className="p3">{plan.description}</p>
-						<ul className="flex flex-col gap-7 leading-tight">
+						<ul className="flexCol gap-7">
 							{plan.bulletPoints.map((point, index) => (
 								<li
 									key={index}

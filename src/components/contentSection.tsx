@@ -3,6 +3,7 @@ import { Title } from "./title";
 import { PricePlan } from "./pricePlan";
 import { ClientQuotes } from "./clientQuotes";
 import { LightBlueButton } from "./lightBlueButton";
+import { ImagePlaceholder } from "./imagePlaceholder";
 
 type ContentSectionProps = ContentSectionData
 
@@ -16,21 +17,21 @@ const textClassMap = {
 	light: "text-secondary-black"
 }
 
-export function ContentSection({title, description,description2, buttonText, imgSrc, imgPosition = "bottom", backgroundVariant = "light", horizontalScrollItems}: ContentSectionProps)
+export function ContentSection({title, description, description2, buttonText, imgSrc, imgPosition = "bottom", backgroundVariant = "light", horizontalScrollItems}: ContentSectionProps)
 {
 	const image = imgSrc
 	? <img src={imgSrc}></img>
-	: <div className='w-full h-48 bg-blue-200'></div>
+	: <ImagePlaceholder/>
 
 	const backgroundClass = backgroundClassMap[backgroundVariant];
 	const textClass = textClassMap[backgroundVariant];
 
 
 	return (
-		<section className={"px-4 py-18 h-fit flex flex-col gap-26 " + backgroundClass}>
-			<div className='w-full flex flex-col justify-center items-center gap-16'>
+		<section className={"px-4 py-18 h-fit flexCol gap-26 " + backgroundClass}>
+			<div className='w-full flexCol justify-center items-center gap-16'>
 				{imgPosition === "top" && image}
-				<div className='flex flex-col gap-8'>
+				<div className='flexCol gap-8'>
 					<Title textClass={textClass} text={title}/>
 					{description &&
 						<p className={"p2 text-center " + textClass}>{description}</p>}
@@ -41,7 +42,7 @@ export function ContentSection({title, description,description2, buttonText, img
 					<ClientQuotes clientQuoteItems={horizontalScrollItems.items}/>}
 				{buttonText &&	<LightBlueButton buttonText={buttonText}/>}
 				{description2 &&
-						<p className={"font-inter text-secondary-black text-lg text-center font-light " + textClass}>{description2}</p>}
+						<p className={"p2 text-secondary-black text-center " + textClass}>{description2}</p>}
 				{imgPosition === "bottom" && image}
 			</div>
 		</section>
