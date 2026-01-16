@@ -5,6 +5,7 @@ import dataImg from "./assets/data.png";
 import appImg from "./assets/Apps.png";
 import testClientProfile from "./assets/testClientProfile.png";
 import appIconsImg from "./assets/appIcons.png";
+import type { LinkSection } from './types';
 
 export const ContentSections: ContentSectionData[] = [
 	{
@@ -147,12 +148,9 @@ export const ContentSections: ContentSectionData[] = [
 	}
 ];
 
-export type LinkSection = {
-  title?: string;
-  links: string[];
-};
 
-export const FooterSection = {
+
+export const FooterSectionText = {
 	description: "whitepace was created for the new ways we live and work. We make beautyfully designed around the world",
 	links: [
 		{
@@ -173,4 +171,10 @@ export const FooterSection = {
 	description2: "Get started for free. Add your whole team as your needs grow.",
 	buttonText: "Start today",
 	copyright: "©2021 Whitepace LLC."
+}
+
+export const HeroSectionText = {
+	title: "Get More Done with whitepace",
+	description: "Project management software that enables your teams to collaborate, plan, analyze and manage everyday tasks",
+	buttonText: "Try TasKey Free"
 }

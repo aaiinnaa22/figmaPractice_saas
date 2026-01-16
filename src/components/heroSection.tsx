@@ -1,5 +1,6 @@
 import { LightBlueButton } from "./lightBlueButton";
 import { ImagePlaceholder } from "./imagePlaceholder";
+import { HeroSectionText } from "../data";
 
 export function HeroSection()
 {
@@ -7,10 +8,10 @@ export function HeroSection()
 		<section className='px-4 py-20 bg-primary-DarkBlue h-fit flexCol gap-26'>
 			<div className='w-full flexCol justify-center items-center gap-16'>
 				<div className='flexCol gap-8'>
-					<h1 className="h4 text-secondary-white text-center">Get More Done with whitepace</h1>
-					<p className="p2 text-secondary-white text-center">Project management software that enables your teams to collaborate, plan, analyze and manage everyday tasks</p>
+					<h1 className="h4 text-secondary-white text-center">{HeroSectionText.title}</h1>
+					<p className="p2 text-secondary-white text-center">{HeroSectionText.description}</p>
 				</div>
-			<LightBlueButton buttonText="Try TasKey Free"/>
+			<LightBlueButton buttonText={HeroSectionText.buttonText}/>
 			</div>
 			<ImagePlaceholder/>
 		</section>

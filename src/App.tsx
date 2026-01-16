@@ -2,7 +2,7 @@ import './index.css'
 import {Menu} from "lucide-react"
 import { HeroSection } from './components/heroSection';
 import { ContentSection } from './components/contentSection';
-import { Footer } from './components/footer';
+import { FooterSection } from './components/footerSection';
 import socialsImg from "./assets/socials.png"
 import iconImg from "./assets/logo.png";
 import { ContentSections } from './data';
@@ -28,7 +28,7 @@ function App() {
 					horizontalScrollItems={section.horizontalScrollItems}
 				/>
 			))}
-			<Footer/>
+			<FooterSection/>
 			<div className='bg-primary-DarkBlue flex justify-center py-4'>
 				<img src={socialsImg} className="py-4"></img>
 			</div>

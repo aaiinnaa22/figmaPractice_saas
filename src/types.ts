@@ -30,3 +30,8 @@ export type ContentSectionData = {
   horizontalScrollItems?: HorizontalScrollItems;
   backgroundVariant?: BackgroundVariant;
 };
+
+export type LinkSection = {
+  title?: string;
+  links: string[];
+};
