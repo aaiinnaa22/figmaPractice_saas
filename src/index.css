@@ -29,7 +29,7 @@
 
 @layer components {
 	.p1 {
-		@apply text-2xl font-medium tracking-wide
+		@apply text-2xl
 	}
 	.p2 {
 		@apply text-[18px] font-light
@@ -38,7 +38,7 @@
 		@apply font-light text-[16px] leading-tight
 	}
 	.h4 {
-		@apply font-bold text-[37px]
+		@apply font-bold text-[37px] md:text-[54px]
 	}
 	.h5 {
 		@apply font-bold text-3xl
@@ -46,7 +46,10 @@
 }
 
 @layer utilities {
-  .flexCol {
-    @apply flex flex-col;
-  }
+	.flexCol {
+		@apply flex flex-col;
+	}
+	.flexRow {
+		@apply flex flex-row;
+	}
 }

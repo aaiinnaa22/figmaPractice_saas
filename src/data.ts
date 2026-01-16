@@ -137,20 +137,20 @@ export const ContentSections: ContentSectionData[] = [
 			]
 		},
 		imgPosition: "none"
-	},
-	{
-		title: "Try Whitepace today",
-		description: "Get started for free. Add your whole team as your needs grow.",
-		buttonText: "Try Taskey free",
-		description2: "On a big team? Contact sales",
-		imgSrc: appIconsImg,
-		backgroundVariant: "dark"
 	}
 ];
 
 
 
 export const FooterSectionText = {
+	contentSection:
+		{
+			title: "Try Whitepace today",
+			description: "Get started for free. Add your whole team as your needs grow.",
+			buttonText: "Try Taskey free",
+			description2: "On a big team? Contact sales",
+			imgSrc: appIconsImg,
+		} as ContentSectionData,
 	description: "whitepace was created for the new ways we live and work. We make beautyfully designed around the world",
 	links: [
 		{
