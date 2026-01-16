@@ -14,7 +14,7 @@ export function FooterSection() {
 				</p>
 			</div>
 			{FooterSectionText.links.map((linkSection) => (
-				<div className="flexCol items-center gap-4 font-inter text-secondary-white">
+				<div key={linkSection.title} className="flexCol items-center gap-4 font-inter text-secondary-white">
 					<h3 className="p2 font-bold">{linkSection.title}</h3>
 					<nav className="flexCol items-center gap-4">
 						{linkSection.links.map((link) => (
@@ -37,7 +37,7 @@ export function FooterSection() {
 				<LanguageSelector/>
 				<nav className="flexCol gap-5 items-center">
 					{FooterSectionText.legalLinks.links.map((link) => (
-						<a className="p3 text-secondary-white">{link}</a>
+						<a key={link} className="p3 text-secondary-white">{link}</a>
 					))}
 				</nav>
 				<p className="p3 text-secondary-white">{FooterSectionText.copyright}</p>
