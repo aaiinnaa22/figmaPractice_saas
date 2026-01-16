@@ -5,7 +5,7 @@ import { FooterSectionText } from "../data";
 
 export function FooterSection() {
 	return (
-		<footer className='px-8 pt-20 bg-primary-DarkBlue h-fit flexCol gap-16'>
+		<footer className='px-8 pt-20 bg-primary-DarkBlue flexCol gap-16'>
 			<div className="flexCol gap-6">
 				<img className="object-contain h-9" src={logoImg}></img>
 				<p

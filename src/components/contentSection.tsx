@@ -28,7 +28,7 @@ export function ContentSection({title, description, description2, buttonText, im
 
 
 	return (
-		<section className={"px-4 py-18 h-fit flexCol gap-26 " + backgroundClass}>
+		<section className={"px-4 pb-20 pt-22 h-fit flexCol gap-26 " + backgroundClass}>
 			<div className='w-full flexCol justify-center items-center gap-16'>
 				{imgPosition === "top" && image}
 				<div className='flexCol gap-8'>
