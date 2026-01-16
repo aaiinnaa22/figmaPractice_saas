@@ -33,7 +33,7 @@ export function FooterSection() {
 				</p>
 				<LightBlueButton buttonText={FooterSectionText.buttonText}/>
 			</div>
-			<div className="flexCol gap-5 px-8 items-center border-b border-primary-LightBlue pb-5">
+			<div className="flexCol gap-5 px-8 items-center pb-5">
 				<LanguageSelector/>
 				<nav className="flexCol gap-5 items-center">
 					{FooterSectionText.legalLinks.links.map((link) => (
