@@ -37,6 +37,9 @@
 	.p3 {
 		@apply font-light text-[16px] leading-tight
 	}
+	.h3 {
+		@apply text-[54px]
+	}
 	.h4 {
 		@apply font-bold text-[37px]
 	}
@@ -75,6 +78,25 @@
 		}
 		.pricePlan .swiper-slide-active .pricePlanPrice {
 			@apply text-amber-200
+		}
+
+		.md\:p1 {
+			@apply text-2xl
+		}
+		.md\:p2 {
+			@apply text-[18px] font-light
+		}
+		.md\:p3 {
+			@apply font-light text-[16px] leading-tight
+		}
+		.md\:h3 {
+		@apply text-[54px]
+		}
+		.md\:h4 {
+			@apply font-bold text-[37px]
+		}
+		.md\:h5 {
+			@apply font-bold text-3xl
 		}
 	}
 

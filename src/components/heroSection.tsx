@@ -1,4 +1,4 @@
-import { Button } from "./Button";
+import { Button } from "./button";
 import { ImagePlaceholder } from "./imagePlaceholder";
 import { HeroSectionText } from "../data";
 
@@ -9,7 +9,7 @@ export function HeroSection()
 		md:py-28">
 			<div className='w-full flexCol justify-center items-center gap-16'>
 				<div className='flexCol gap-8'>
-					<h1 className="h4 text-secondary-white text-center">{HeroSectionText.title}</h1>
+					<h1 className="h4 md:h3 text-secondary-white text-center">{HeroSectionText.title}</h1>
 					<p className="p2 text-secondary-white text-center">{HeroSectionText.description}</p>
 				</div>
 			<Button buttonText={HeroSectionText.buttonText}/>
