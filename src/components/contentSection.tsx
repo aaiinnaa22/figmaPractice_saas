@@ -2,7 +2,7 @@ import type { ContentSectionData } from "../types";
 import { Title } from "./title";
 import { PricePlan } from "./pricePlan";
 import { ClientQuotes } from "./clientQuotes";
-import { LightBlueButton } from "./lightBlueButton";
+import { Button } from "./button";
 import { ImagePlaceholder } from "./imagePlaceholder";
 
 type ContentSectionProps = ContentSectionData
@@ -40,7 +40,7 @@ export function ContentSection({title, description, description2, buttonText, im
 					<PricePlan pricePlanItems={horizontalScrollItems.items}/>}
 				{horizontalScrollItems?.type === "clientQuotes" &&
 					<ClientQuotes clientQuoteItems={horizontalScrollItems.items}/>}
-				{buttonText &&	<LightBlueButton buttonText={buttonText}/>}
+				{buttonText &&	<Button buttonText={buttonText}/>}
 				{description2 &&
 						<p className={"p2 text-secondary-black text-center " + textClass}>{description2}</p>}
 				{imgPosition === "bottom" && image}

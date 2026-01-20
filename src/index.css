@@ -38,11 +38,46 @@
 		@apply font-light text-[16px] leading-tight
 	}
 	.h4 {
-		@apply font-bold text-[37px] md:text-[54px]
+		@apply font-bold text-[37px]
 	}
 	.h5 {
 		@apply font-bold text-3xl
 	}
+	.pricePlanCard {
+		@apply bg-primary-DarkBlue rounded-xl p-5 font-inter text-secondary-white flex flex-col gap-5 mb-20
+	}
+	.pricePlanButton {
+		@apply bg-primary-LightBlue text-secondary-white
+	}
+	@media (min-width: 768px) {
+		/*price plan cards non-active on medium screens*/
+		.pricePlanCard {
+			@apply py-18 px-12
+		}
+		.pricePlan .swiper-slide .pricePlanCard {
+			@apply bg-secondary-white text-secondary-black border border-amber-200 scale-90
+		}
+		.pricePlan .swiper-slide .pricePlanButton {
+			@apply bg-secondary-white border border-amber-200 text-secondary-black
+		}
+		.pricePlan .swiper-slide img {
+			@apply grayscale brightness-0
+		}
+		/*price plan cards active on medium screens*/
+		.pricePlan .swiper-slide-active .pricePlanCard {
+			@apply bg-primary-DarkBlue text-secondary-white border-0 scale-100
+		}
+		.pricePlan .swiper-slide-active .pricePlanButton {
+			@apply bg-primary-LightBlue border-0 text-secondary-white
+		}
+		.pricePlan .swiper-slide-active img {
+			@apply filter-none
+		}
+		.pricePlan .swiper-slide-active .pricePlanPrice {
+			@apply text-amber-200
+		}
+	}
+
 }
 
 @layer utilities {

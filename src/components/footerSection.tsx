@@ -1,6 +1,6 @@
 import logoImg from "../assets/logo.png"
 import { LanguageSelector } from "./languageSelector";
-import { LightBlueButton } from "./lightBlueButton";
+import { Button } from "./button";
 import { FooterSectionText } from "../data";
 
 export function FooterSection() {
@@ -10,7 +10,7 @@ export function FooterSection() {
 				<h2 className="h4 text-secondary-white text-center md:text-left">{FooterSectionText.contentSection.title}</h2>
 				<p className="p2 md:p1 text-secondary-white text-center font-light">{FooterSectionText.contentSection.description}</p>
 				{FooterSectionText.contentSection.buttonText &&
-				<LightBlueButton buttonText={FooterSectionText.contentSection.buttonText}/>}
+				<Button buttonText={FooterSectionText.contentSection.buttonText}/>}
 				<p className="p2 md:p1 text-secondary-white text-center font-light">{FooterSectionText.contentSection.description2}</p>
 				<img className="object-contain md:h-15" src={FooterSectionText.contentSection.imgSrc}/>
 			</div>
@@ -40,7 +40,7 @@ export function FooterSection() {
 					className="p2 text-secondary-white text-center">
 						{FooterSectionText.description2}
 					</p>
-					<LightBlueButton buttonText={FooterSectionText.buttonText}/>
+					<Button buttonText={FooterSectionText.buttonText}/>
 				</div>
 				<div className="flex flex-col gap-5 px-8 items-center pb-5 md:flex-row justify-center md:justify-between">
 					<LanguageSelector/>

@@ -1,4 +1,4 @@
-import { LightBlueButton } from "./lightBlueButton";
+import { Button } from "./Button";
 import { ImagePlaceholder } from "./imagePlaceholder";
 import { HeroSectionText } from "../data";
 
@@ -12,7 +12,7 @@ export function HeroSection()
 					<h1 className="h4 text-secondary-white text-center">{HeroSectionText.title}</h1>
 					<p className="p2 text-secondary-white text-center">{HeroSectionText.description}</p>
 				</div>
-			<LightBlueButton buttonText={HeroSectionText.buttonText}/>
+			<Button buttonText={HeroSectionText.buttonText}/>
 			</div>
 			<ImagePlaceholder/>
 		</section>
