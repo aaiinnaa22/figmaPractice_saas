@@ -5,13 +5,12 @@ import {Pagination, Autoplay} from "swiper/modules";
 type CarouselProps =
 {
 	children: React.ReactNode;
-	className?: string;
 }
 
-export function Carousel({ children, className }: CarouselProps) {
+export function Carousel({ children}: CarouselProps) {
 	return (
 		<Swiper
-			className={className}
+			className="w-full"
 			modules={[Pagination, Autoplay]}
 			spaceBetween={20}
 			autoplay={{ delay: 3000, disableOnInteraction: true }}

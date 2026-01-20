@@ -11,10 +11,10 @@ type ClientQuotesProps =
 
 export function ClientQuotes({clientQuoteItems}: ClientQuotesProps) {
 	return (
-		<Carousel className="w-full h-136">
+		<Carousel>
 			{clientQuoteItems.map((quote, index) => (
 				<SwiperSlide key={index}>
-					<div className="shadow-lg rounded-xl flexCol p-6">
+					<div className="shadow-lg rounded-xl flexCol p-6 mb-20">
 						<div className="pb-10 mb-10 border-b flexCol gap-6">
 							<img
 							src={quoteMarkImg}

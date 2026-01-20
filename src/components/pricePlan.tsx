@@ -11,10 +11,10 @@ type PricePlanProps =
 
 export function PricePlan({pricePlanItems}: PricePlanProps) {
 	return (
-		<Carousel className="w-full h-180">
+		<Carousel>
 			{pricePlanItems.map((plan, index) => (
 				<SwiperSlide key={index}>
-					<div className="bg-primary-DarkBlue rounded-lg p-5 font-inter text-secondary-white flexCol gap-5">
+					<div className="bg-primary-DarkBlue rounded-lg p-5 font-inter text-secondary-white flexCol gap-5 mb-20">
 						<h3 className="p1">{plan.title}</h3>
 						<p className="h4">{plan.price}</p>
 						<p className="p3">{plan.description}</p>
