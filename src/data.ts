@@ -39,12 +39,14 @@ export const ContentSections: ContentSectionData[] = [
 			items:
 			[
 				{
-					title: "Free",
-					price: "$0",
-					description: "Free version",
+					title: "Personal",
+					price: "$11.2",
+					description: "Keep home and family on track",
 					bulletPoints: [
-						"2 GB monthly uploads",
-						"100 MB max. note size",
+						"Sync unlimited devices",
+						"10 GB monthly uploads",
+						"200 MB max. note size",
+						"Customize Home dashboard and access extra widgets",
 						"Connect primary Google Calendar account",
 						"Add due dates, reminders, and notifications to your tasks"
 					],
@@ -65,13 +67,13 @@ export const ContentSections: ContentSectionData[] = [
 					buttonText: "Get Started"
 				},
 				{
-					title: "Business",
-					price: "$32.9",
-					description: "Keep your business on track",
+					title: "Personal",
+					price: "$11.2",
+					description: "Keep home and family on track",
 					bulletPoints: [
 						"Sync unlimited devices",
-						"20 GB monthly uploads",
-						"300 MB max. note size",
+						"10 GB monthly uploads",
+						"200 MB max. note size",
 						"Customize Home dashboard and access extra widgets",
 						"Connect primary Google Calendar account",
 						"Add due dates, reminders, and notifications to your tasks"

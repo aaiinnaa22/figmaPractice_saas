@@ -7,7 +7,7 @@ export function FooterSection() {
 	return (
 		<footer className='px-8 md:px-6 pt-20 md:pt-28 bg-primary-DarkBlue flexCol gap-26 md:gap-20 md:items-start'>
 			<div className="flexCol items-center gap-8 md:items-start">
-				<h2 className="h4 text-secondary-white">{FooterSectionText.contentSection.title}</h2>
+				<h2 className="h4 text-secondary-white text-center md:text-left">{FooterSectionText.contentSection.title}</h2>
 				<p className="p2 md:p1 text-secondary-white text-center font-light">{FooterSectionText.contentSection.description}</p>
 				{FooterSectionText.contentSection.buttonText &&
 				<LightBlueButton buttonText={FooterSectionText.contentSection.buttonText}/>}
@@ -44,7 +44,7 @@ export function FooterSection() {
 				</div>
 				<div className="flex flex-col gap-5 px-8 items-center pb-5 md:flex-row justify-center md:justify-between">
 					<LanguageSelector/>
-					<nav className="flex flex-row gap-5 items-center md:flex-row md:gap-12">
+					<nav className="flex flex-col gap-5 items-center md:flex-row md:gap-12">
 						{FooterSectionText.legalLinks.links.map((link) => (
 							<a key={link} className="p3 text-secondary-white">{link}</a>
 						))}

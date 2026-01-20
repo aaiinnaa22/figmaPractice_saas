@@ -8,16 +8,28 @@ type CarouselProps =
 	className?: string;
 }
 
-export function Carousel({children, className}: CarouselProps) {
+export function Carousel({ children, className }: CarouselProps) {
 	return (
 		<Swiper
 			className={className}
 			modules={[Pagination, Autoplay]}
-			pagination={{ clickable: true }}
 			spaceBetween={20}
 			autoplay={{ delay: 3000, disableOnInteraction: true }}
-			slidesPerView={1}>
-				{children}
+			speed={900}
+			pagination={{
+				clickable: true,
+				enabled: true,
+			}}
+			breakpoints={{
+				768: {
+					slidesPerView: 1.5,
+					centeredSlides: true,
+					spaceBetween: 30,
+					pagination: { enabled: false },
+				},
+			}}
+		>
+		{children}
 		</Swiper>
 	);
-};
+}
