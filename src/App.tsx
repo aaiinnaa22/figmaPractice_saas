@@ -9,7 +9,7 @@ import { ContentSections } from './data';
 
 function App() {
 	return (
-		<div className="w-screen flexCol bg-secondary-white">
+		<div className="w-screen flex flex-col bg-secondary-white">
 			<header className="z-20 sticky h-fit w-full top-0 left-0 p-3 bg-primary-DarkBlue flex items-center justify-between">
 				<img src={iconImg}></img>
 				<Menu className='h-10 w-10 text-secondary-white'/>

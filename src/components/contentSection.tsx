@@ -28,10 +28,10 @@ export function ContentSection({title, description, description2, buttonText, im
 
 
 	return (
-		<section className={"min-h-194 md:min-h-160 px-4 pb-20 pt-22 flexCol gap-26 " + backgroundClass}>
-			<div className='w-full flexCol justify-center items-center gap-16'>
+		<section className={"min-h-194 md:min-h-160 px-4 pb-20 pt-22 flex flex-col gap-26 " + backgroundClass}>
+			<div className='w-full flex flex-col justify-center items-center gap-16'>
 				{imgPosition === "top" && image}
-				<div className='flexCol gap-8'>
+				<div className='flex flex-col gap-8'>
 					<Title textClass={textClass} text={title}/>
 					{description &&
 						<p className={"p2 text-center " + textClass}>{description}</p>}

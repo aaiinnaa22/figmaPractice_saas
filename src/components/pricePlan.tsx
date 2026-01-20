@@ -18,7 +18,7 @@ export function PricePlan({pricePlanItems}: PricePlanProps) {
 						<h3 className="p1 font-semibold">{plan.title}</h3>
 						<p className="h4 pricePlanPrice">{plan.price}</p>
 						<p className="p3">{plan.description}</p>
-						<ul className="flexCol gap-7">
+						<ul className="flex flex-col gap-7">
 							{plan.bulletPoints.map((point, index) => (
 								<li
 									key={index}
