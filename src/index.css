@@ -52,6 +52,9 @@
 	.pricePlanButton {
 		@apply bg-primary-LightBlue text-secondary-white
 	}
+	.clientQuotesCard {
+		@apply shadow-lg rounded-xl grid grid-cols-1 gap-8 p-6 mb-20
+	}
 	@variant md {
 		/*price plan cards non-active on medium screens*/
 		.pricePlanCard {
@@ -79,7 +82,26 @@
 		.pricePlan .swiper-slide-active .pricePlanPrice {
 			@apply text-amber-200
 		}
-
+		/*client quotes on medium screens*/
+		.clientQuotes .swiper-slide .clientQuotesCard
+		{
+			@apply bg-primary-LightBlue
+		}
+		.clientQuotes .swiper-slide .clientQuotesCard p,
+		.clientQuotes .swiper-slide .clientQuotesCard h3
+		{
+			@apply text-secondary-white
+		}
+		.clientQuotes .swiper-slide-active .clientQuotesCard p,
+		.clientQuotes .swiper-slide-active .clientQuotesCard h3
+		{
+			@apply text-secondary-black
+		}
+		.clientQuotes .swiper-slide-active .clientQuotesCard
+		{
+			@apply bg-secondary-white
+		}
+		/*text tailwind like responsiveness*/
 		.md\:p1 {
 			@apply text-2xl
 		}

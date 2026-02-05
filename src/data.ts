@@ -117,7 +117,8 @@ export const ContentSections: ContentSectionData[] = [
 			items: [
 				{
 					quote: "Taskkey is designed as a collaboration tool for businesses that is a full project management solution.",
-					name: "Oberon Shaw, MCH",
+					name: "Oberon Shaw",
+					company: "MCH",
 					profile: testClientProfile,
 					role: "Head of Talent Acquisition",
 					location: "North America"
@@ -125,14 +126,16 @@ export const ContentSections: ContentSectionData[] = [
 				{
 					quote: "Taskkey is designed as a collaboration tool for businesses that is a full project management solution.",
 					profile: testClientProfile,
-					name: "Oberon Shaw, MCH",
+					name: "Oberon Shaw",
+					company: "MCH",
 					role: "Head of Talent Acquisition",
 					location: "North America"
 				},
 				{
 					quote: "Taskkey is designed as a collaboration tool for businesses that is a full project management solution.",
 					profile: testClientProfile,
-					name: "Oberon Shaw, MCH",
+					name: "Oberon Shaw",
+					company: "MCH",
 					role: "Head of Talent Acquisition",
 					location: "North America"
 				},

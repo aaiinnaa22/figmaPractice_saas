@@ -1,8 +1,10 @@
 import type { PricePlanItem } from "../types";
 import bulletPointImg from "../assets/bulletPoint.png"
 import { SwiperSlide } from "swiper/react";
-import { Carousel } from "./carousel";
 import { Button } from "./button";
+import { Swiper} from "swiper/react";
+import {Pagination, Autoplay} from "swiper/modules";
+
 
 type PricePlanProps =
 {
@@ -11,7 +13,24 @@ type PricePlanProps =
 
 export function PricePlan({pricePlanItems}: PricePlanProps) {
 	return (
-		<Carousel className="pricePlan">
+		<Swiper
+			className={"w-full pricePlan"}
+			modules={[Pagination, Autoplay]}
+			spaceBetween={20}
+			autoplay={{ delay: 3000, disableOnInteraction: true }}
+			speed={900}
+			pagination={{
+				clickable: true,
+				enabled: true,
+			}}
+			breakpoints={{
+				768: {
+					slidesPerView: 1.5,
+					centeredSlides: true,
+					spaceBetween: 30,
+					pagination: { enabled: false },
+				},
+			}}>
 			{pricePlanItems.map((plan, index) => (
 				<SwiperSlide key={index} className="group">
 					<div className="pricePlanCard">
@@ -34,6 +53,6 @@ export function PricePlan({pricePlanItems}: PricePlanProps) {
 					</div>
 				</SwiperSlide>
 			))}
-		</Carousel>
+		</Swiper>
 	);
 };

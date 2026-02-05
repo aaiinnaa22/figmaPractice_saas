@@ -12,6 +12,7 @@ export type ClientQuoteItem = {
 	quote: string;
 	profile: string;
 	name: string;
+	company: string;
 	role: string;
 	location: string;
 }
